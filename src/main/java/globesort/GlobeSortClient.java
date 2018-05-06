@@ -54,7 +54,8 @@ public class GlobeSortClient {
         IntArray response = serverStub.sortIntegers(request);
         endTime = System.currentTimeMillis();
         System.out.println("Array sorted");
-        System.out.println("Time used: " + (endTime - startTime) + "ms");
+        System.out.println("Client time used: " + (endTime - startTime) + "ms");
+        System.out.println("Server time used: " + response.getTime() + "ms");
     }
 
     public void shutdown() throws InterruptedException {
