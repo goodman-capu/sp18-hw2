@@ -59,7 +59,7 @@ public class GlobeSortClient {
         System.out.println("Application throughput: " + values.length * 1000.0 / appTime  + " int/s");
         long netTime = appTime - response.getTime();
         System.out.println("Network time used: " + netTime + " ms");
-        System.out.println("Network throughput: " + values.length * 1000.0 / netTime + "int/s");
+        System.out.println("Network throughput: " + values.length * 1000.0 / netTime + " int/s");
     }
 
     public void shutdown() throws InterruptedException {
