@@ -9,4 +9,3 @@ tar -xzf apache-maven-3.5.2-bin.tar.gz
 sudo mv apache-maven-3.5.2 /opt/.
 rm apache-maven-3.5.2-bin.tar.gz
 echo "PATH=\$PATH:/opt/apache-maven-3.5.2/bin" >> ~/.bashrc
-. ~/.bashrc
