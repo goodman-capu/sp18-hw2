@@ -95,7 +95,7 @@ public class GlobeSortServer {
             Arrays.sort(values);
             endTime = System.currentTimeMillis();
             System.out.println("Sorting complete");
-            System.out.println("Time used: " + (endTime - startTime) + "ms");
+            System.out.println("Time used: " + (endTime - startTime) + " ms");
             IntArray.Builder responseBuilder = IntArray.newBuilder();
             for (Integer val : values) {
                 responseBuilder.addValues(val);

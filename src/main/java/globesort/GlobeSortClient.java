@@ -46,7 +46,7 @@ public class GlobeSortClient {
         serverStub.ping(Empty.newBuilder().build());
         endTime = System.currentTimeMillis();
         System.out.println("Ping successful");
-        System.out.println("Round trip time: " + (endTime - startTime) + "ms");
+        System.out.println("Round trip time: " + (endTime - startTime) + " ms");
 
         System.out.println("Requesting server to sort array...");
         IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
@@ -55,11 +55,11 @@ public class GlobeSortClient {
         endTime = System.currentTimeMillis();
         System.out.println("Array sorted");
         long appTime = endTime - startTime;
-        System.out.println("Application time used: " + appTime + "ms");
-        System.out.println("Application throughput: " + values.length * 1000.0 / appTime  + "int / s");
+        System.out.println("Application time used: " + appTime + " ms");
+        System.out.println("Application throughput: " + values.length * 1000.0 / appTime  + " int/s");
         long netTime = appTime - response.getTime();
-        System.out.println("Network time used: " + netTime + "ms");
-        System.out.println("Network throughput: " + values.length * 1000.0 / netTime + "int / s");
+        System.out.println("Network time used: " + netTime + " ms");
+        System.out.println("Network throughput: " + values.length * 1000.0 / netTime + "int/s");
     }
 
     public void shutdown() throws InterruptedException {
