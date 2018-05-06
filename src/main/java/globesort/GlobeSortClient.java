@@ -56,10 +56,10 @@ public class GlobeSortClient {
         System.out.println("Array sorted");
         long appTime = endTime - startTime;
         System.out.println("Application time used: " + appTime + "ms");
-        System.out.println("Application throughput: " + 1.0 * appTime / values.length + "int / s");
+        System.out.println("Application throughput: " + values.length / (1000.0 * appTime)  + "int / s");
         long netTime = appTime - response.getTime();
         System.out.println("Network time used: " + netTime + "ms");
-        System.out.println("Network throughput: " + 1.0 * netTime / values.length + "int / s");
+        System.out.println("Network throughput: " + values.length / (1000.0 * netTime) + "int / s");
     }
 
     public void shutdown() throws InterruptedException {
